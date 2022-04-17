@@ -7,16 +7,12 @@ struct data
 
 int main(int argc, char const *argv[])
 {
-   float a1, an;
-   int n;
-   printf("Enter a1: ");
-   scanf("%f", &a1);
-   printf("Enter an: ");
-   scanf("%f", &an);
-   printf("Enter number of elements: ");
-   scanf("%d", &n);
-
-   float result = (a1 + an) * ((double)n/2);
-
-   printf("Sum: %f\n", result);
+   float seconds;
+   printf("Enter Seconds: ");
+   scanf("%f", &seconds);
+   int hours = seconds/3600;
+   int minutes = (seconds - (hours*3600)) / 60;
+   int cseconds = (int) (seconds - (hours*3600)) % 60;
+   printf("%d hour(s), %d minute(s), %d second(s).\n", hours, minutes, cseconds);
+   return 0;
 }
