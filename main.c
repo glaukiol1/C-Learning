@@ -7,12 +7,9 @@ struct data
 
 int main(int argc, char const *argv[])
 {
-   float seconds;
-   printf("Enter Seconds: ");
-   scanf("%f", &seconds);
-   int hours = seconds/3600;
-   int minutes = (seconds - (hours*3600)) / 60;
-   int cseconds = (int) (seconds - (hours*3600)) % 60;
-   printf("%d hour(s), %d minute(s), %d second(s).\n", hours, minutes, cseconds);
+   float data;
+   printf("Enter float: ");
+   scanf("%f", &data);
+   printf("Decimal: %f\n", data - ((int) data));
    return 0;
 }
